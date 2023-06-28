@@ -1,0 +1,52 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication1
+{
+    public class Candidate
+    {
+        public int candidate_ID;
+        public string candidate_Name;
+        public int candidate_Age;
+        public double candidate_Weight;
+        public double candidate_Height;
+
+        public void getDetails()
+        {
+            Console.WriteLine("Enter Candidate Detail");
+            Console.Write("ID : ");
+            candidate_ID = Convert.ToInt32(Console.ReadLine());
+            Console.Write("\nName: ");
+            candidate_Name = Console.ReadLine();
+            Console.Write("\nAge : ");
+            candidate_Age = Convert.ToInt32(Console.ReadLine());
+            Console.Write("\nWeight : ");
+            candidate_Weight = Convert.ToDouble(Console.ReadLine());
+            Console.Write("\nHeight: ");
+            candidate_Height = Convert.ToDouble(Console.ReadLine());
+        }
+
+        public void displayDetail()
+        {
+            Console.WriteLine("\nDisplay Candidate Detail");
+            Console.WriteLine("\nID : " + candidate_ID);
+            Console.WriteLine("\nName: " + candidate_Name);
+            Console.WriteLine("\nAge: " + candidate_Age);
+            Console.WriteLine("\nWeight : " + candidate_Weight);
+            Console.WriteLine("\nHeight: " + candidate_Height);
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Candidate candidate = new Candidate();
+            candidate.getDetails();
+            candidate.displayDetail();
+            Console.ReadLine();
+        }
+    }
+}

@@ -1,0 +1,36 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace L3Program7
+{
+    class Rectangle
+    {
+        public double w;
+        public double h;
+        public Rectangle(double w,double h) {
+            this.w = w;
+            this.h = h;
+        }
+        public double calculateArea()
+        {
+            return w * h;
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter Widht : ");
+            double w = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Enter Height: ");
+            double h = Convert.ToDouble(Console.ReadLine());
+
+            Rectangle r1 = new Rectangle(w,h);
+            Console.WriteLine("Area : " + r1.calculateArea());
+            Console.ReadLine();
+        }
+    }
+}

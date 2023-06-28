@@ -1,0 +1,53 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Third_program
+{
+    public class Bank_Account
+    {
+        public long account_No;
+        public string user_Name;
+        public string  email;
+        public string account_Type;
+        public double account_Balance;
+
+        public void grtAccountDetail()
+        {
+            Console.WriteLine("Enter Bank Detail");
+            Console.WriteLine("Account No : ");
+            account_No = Convert.ToInt64(Console.ReadLine());
+            Console.WriteLine("User Name: ");
+            user_Name= Console.ReadLine();
+            Console.WriteLine("Email : ");
+            email= Console.ReadLine();
+            Console.WriteLine("Account Type : ");
+            account_Type= Console.ReadLine();
+            Console.WriteLine("Account Balance : ");
+            account_Balance = Convert.ToDouble(Console.ReadLine());
+        }
+
+        public void displayAccountDetail()
+        {
+            Console.WriteLine("\nDisplay Account Detail");
+            Console.WriteLine("Account No : " + account_No);
+            Console.WriteLine("User Name: "+ user_Name);
+            Console.WriteLine("Email : "+email);
+            Console.WriteLine("Account Type : "+account_Type);
+            Console.WriteLine("Account Balance : "+account_Balance);
+        }
+
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Bank_Account account1 = new Bank_Account();
+            account1.grtAccountDetail();
+            account1.displayAccountDetail();
+            Console.ReadLine();
+        }
+    }
+}

@@ -1,0 +1,52 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ForthProgram
+{
+    class Program
+    {
+        public class Student
+        {
+            public long enrollment_No;
+            public string student_Name;
+            public int semester;
+            public double CPI;
+            public double SPI;
+            public void getStudentDetail()
+            {
+                Console.WriteLine("Enter Student Detail");
+                Console.WriteLine("Enrollment No : ");
+                enrollment_No = Convert.ToInt64(Console.ReadLine());
+                Console.WriteLine("Name : ");
+                student_Name = Console.ReadLine();
+                Console.WriteLine("Semester: ");
+                semester= Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("CPI : ");
+                CPI = Convert.ToDouble(Console.ReadLine());
+                Console.WriteLine("SPI : ");
+                SPI = Convert.ToDouble(Console.ReadLine());
+            }
+
+            public void displayStudentDetail()
+            {
+                Console.WriteLine("\nDisplay Student Detail");
+                Console.WriteLine("Enrollment No: " + enrollment_No);
+                Console.WriteLine("Name : "+student_Name);
+                Console.WriteLine("Semester: "+semester);
+                Console.WriteLine("CPI : "+CPI);
+                Console.WriteLine("SPI : "+SPI);
+            }
+        }
+
+        static void Main(string[] args)
+        {
+            Student student1 = new Student();
+            student1.getStudentDetail();
+            student1.displayStudentDetail();
+            Console.ReadLine();
+        }
+    }
+}
